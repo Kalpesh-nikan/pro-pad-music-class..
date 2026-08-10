@@ -3,169 +3,110 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Student Sign Up - Pro Pad Music</title>
+<title>Settings - Pro Pad Music Class</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-secondary-fixed-variant": "#6e3900",
-                      "surface": "#131313",
-                      "on-tertiary-fixed": "#1c1b1b",
-                      "primary": "#f2ca50",
-                      "on-surface-variant": "#d0c5af",
-                      "surface-container": "#20201f",
-                      "outline": "#99907c",
-                      "on-error": "#690005",
-                      "tertiary-fixed": "#e5e2e1",
-                      "surface-variant": "#353535",
-                      "on-secondary": "#4d2600",
-                      "surface-container-high": "#2a2a2a",
-                      "secondary-container": "#fd8b00",
-                      "surface-container-lowest": "#0e0e0e",
-                      "surface-bright": "#393939",
-                      "secondary-fixed-dim": "#ffb77d",
-                      "on-secondary-fixed": "#2f1500",
-                      "secondary": "#ffb77d",
-                      "inverse-primary": "#735c00",
-                      "on-tertiary": "#313030",
-                      "primary-container": "#d4af37",
-                      "on-surface": "#e5e2e1",
-                      "secondary-fixed": "#ffdcc3",
-                      "on-primary": "#3c2f00",
-                      "primary-fixed": "#ffe088",
-                      "tertiary-container": "#b5b2b2",
-                      "background": "#131313",
-                      "inverse-surface": "#e5e2e1",
-                      "on-primary-container": "#554300",
-                      "on-secondary-container": "#603100",
-                      "on-tertiary-container": "#454545",
-                      "tertiary-fixed-dim": "#c8c6c5",
-                      "inverse-on-surface": "#313030",
-                      "primary-fixed-dim": "#e9c349",
-                      "surface-container-low": "#1b1b1b",
-                      "error-container": "#93000a",
-                      "on-error-container": "#ffdad6",
-                      "surface-tint": "#e9c349",
-                      "tertiary": "#d0cecd",
-                      "on-tertiary-fixed-variant": "#474646",
-                      "outline-variant": "#4d4635",
-                      "surface-dim": "#131313",
-                      "on-background": "#e5e2e1",
-                      "on-primary-fixed": "#241a00",
-                      "error": "#ffb4ab",
-                      "surface-container-highest": "#353535",
-                      "on-primary-fixed-variant": "#574500"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "container-padding": "24px",
-                      "gutter": "16px",
-                      "section-gap": "80px",
-                      "base": "8px"
-              },
-              "fontFamily": {
-                      "headline-lg-mobile": [
-                              "Montserrat"
-                      ],
-                      "headline-xl": [
-                              "Montserrat"
-                      ],
-                      "headline-lg": [
-                              "Montserrat"
-                      ],
-                      "body-lg": [
-                              "Hanken Grotesk"
-                      ],
-                      "headline-md": [
-                              "Montserrat"
-                      ],
-                      "body-md": [
-                              "Hanken Grotesk"
-                      ],
-                      "label-md": [
-                              "Hanken Grotesk"
-                      ]
-              },
-              "fontSize": {
-                      "headline-lg-mobile": [
-                              "28px",
-                              {
-                                      "lineHeight": "36px",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-xl": [
-                              "48px",
-                              {
-                                      "lineHeight": "56px",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-lg": [
-                              "32px",
-                              {
-                                      "lineHeight": "40px",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "28px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-md": [
-                              "24px",
-                              {
-                                      "lineHeight": "32px",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "24px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "label-md": [
-                              "14px",
-                              {
-                                      "lineHeight": "20px",
-                                      "letterSpacing": "0.05em",
-                                      "fontWeight": "600"
-                              }
-                      ]
-              }
-      },
-          },
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "primary": "#f2ca50",
+                        "on-surface-variant": "#d0c5af",
+                        "surface-container": "#20201f",
+                        "outline": "#99907c",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "on-secondary": "#4d2600",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-container": "#fd8b00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "on-secondary-fixed": "#2f1500",
+                        "secondary": "#ffb77d",
+                        "inverse-primary": "#735c00",
+                        "on-tertiary": "#313030",
+                        "primary-container": "#d4af37",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed": "#ffdcc3",
+                        "on-primary": "#3c2f00",
+                        "primary-fixed": "#ffe088",
+                        "tertiary-container": "#b5b2b2",
+                        "background": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-container": "#554300",
+                        "on-secondary-container": "#603100",
+                        "on-tertiary-container": "#454545",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-low": "#1b1b1b",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#e9c349",
+                        "tertiary": "#d0cecd",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "outline-variant": "#4d4635",
+                        "surface-dim": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed": "#241a00",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#353535",
+                        "on-primary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding": "24px",
+                        "gutter": "16px",
+                        "section-gap": "80px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
         }
-      </script>
+    </script>
 <style>
-        .input-glow:focus {
-            box-shadow: 0 1px 12px 0 rgba(212, 175, 55, 0.2);
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #d4af37;
         }
-        .bg-glass {
-            background: rgba(18, 18, 18, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #d4af37;
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
         }
     </style>
 <style>
@@ -173,142 +114,172 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
-<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
-<!-- Ambient Background Element -->
-<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary-container opacity-[0.03] rounded-full blur-[100px]"></div>
-<div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary-container opacity-[0.03] rounded-full blur-[80px]"></div>
-</div>
-<!-- Main Content Canvas - Linear/Transactional Page (Nav Suppressed) -->
-<main class="flex-grow flex items-center justify-center p-gutter md:p-container-padding z-10 relative">
-<div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-2xl">
-<!-- Left Side: Visual / Brand Context -->
-<div class="hidden md:flex relative flex-col justify-between p-12 bg-surface-container-high border-r border-surface-container-highest">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="A cinematic, low-key lighting photograph of a professional drum kit in a dark studio. The scene is illuminated by warm, golden accent lights hitting the cymbals, creating a premium, intense musical atmosphere. Deep blacks, rich gold tones. Modernist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAak4I_Yk7lQHNohBZ9fOCS5_tAzm0yF8nY_CeHDZ4haqzvGtgutJ-FKu2HK9Kwd8eNz5pIQpulbpF71nqGn2aA6lO3fF1YkvJPcONsrxwgpUL68K0pp_YghNJBi1Jriqwba-jRKnorG2v97KFxyLq22NXLr05kI8QUlpBYw6ocUPG26m8aPq131NFwjCU6TEnuCOEAJvnZ9I1X0oxg4RwUaDG8aeD2tVlmwGI55uRl1JZKFmGw7uPa"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
-</div>
-<div class="relative z-10 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">music_note</span>
-<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Pro Pad Music Class</span>
-</div>
-<div class="relative z-10 mt-auto">
-<h2 class="font-headline-lg text-headline-lg mb-4 text-on-surface">Begin your musical journey.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Join an elite community of aspiring musicians. Master your craft with professional instructors and state-of-the-art facilities.</p>
-</div>
-</div>
-<!-- Right Side: Sign Up Form -->
-<div class="bg-surface-container p-8 md:p-12 flex flex-col justify-center">
-<div class="mb-8 md:hidden flex items-center gap-3 justify-center">
-<span class="material-symbols-outlined text-primary text-2xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">music_note</span>
-<span class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary tracking-tight">Pro Pad Music</span>
-</div>
-<div class="mb-10 text-center md:text-left">
-<h1 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface mb-2">Student Sign Up</h1>
-<p class="font-body-md text-body-md text-on-surface-variant">Enter your details to create an account.</p>
-</div>
-<form class="space-y-6">
-<!-- Name Fields -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="studentName">Student Full Name</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">person</span>
-<input class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all input-glow" id="studentName" placeholder="Jane Doe" type="text"/>
-</div>
-</div>
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="parentName">Parent / Guardian Name</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">family_restroom</span>
-<input class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all input-glow" id="parentName" placeholder="John Doe" type="text"/>
-</div>
-</div>
-</div>
-<!-- Contact Fields -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="mobileNumber">Mobile Number</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">phone_iphone</span>
-<input class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all input-glow" id="mobileNumber" placeholder="+91 98765 43210" type="tel"/>
-</div>
-</div>
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="whatsappNumber">WhatsApp Number</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">chat</span>
-<input class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all input-glow" id="whatsappNumber" placeholder="Same as mobile" type="tel"/>
-</div>
-</div>
-</div>
-<!-- Email -->
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="email">Email Address</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">mail</span>
-<input class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all input-glow" id="email" placeholder="jane@example.com" type="email"/>
-</div>
-</div>
-<!-- Course & Batch Selection -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="course">Select Course</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">album</span>
-<select class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all appearance-none input-glow" id="course">
-<option disabled="" selected="" value="">Choose a course...</option>
-<option value="drums">Drums</option>
-<option value="octapad">Octapad</option>
-<option value="percussion">Percussion</option>
-</select>
-<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline-variant pointer-events-none">expand_more</span>
-</div>
-</div>
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="batch">Select Batch</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">schedule</span>
-<select class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all appearance-none input-glow" id="batch">
-<option disabled="" selected="" value="">Choose a batch...</option>
-<option value="morning">Morning (8 AM - 10 AM)</option>
-<option value="evening">Evening (5 PM - 7 PM)</option>
-<option value="weekend">Weekend (Sat-Sun)</option>
-</select>
-<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline-variant pointer-events-none">expand_more</span>
-</div>
-</div>
-</div>
-<!-- Passwords -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="password">Password</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">lock</span>
-<input class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all input-glow" id="password" placeholder="••••••••" type="password"/>
-</div>
-</div>
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="confirmPassword">Confirm Password</label>
-<div class="relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">lock</span>
-<input class="w-full bg-surface-container-low border-b border-surface-container-highest focus:border-primary text-on-surface py-3 pl-10 pr-4 rounded-t-DEFAULT outline-none transition-all input-glow" id="confirmPassword" placeholder="••••••••" type="password"/>
-</div>
-</div>
-</div>
-<!-- Actions -->
-<div class="pt-6 mt-8 border-t border-surface-container-highest flex flex-col sm:flex-row items-center justify-between gap-4">
-<button class="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-primary-container to-[#B8860B] text-on-primary-container font-label-md text-label-md font-bold rounded-full hover:opacity-90 transition-opacity flex items-center justify-center gap-2" type="submit">
-<span>Create Account</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-surface-container text-primary font-headline-md-mobile text-headline-md-mobile docked full-width top-0 shadow-sm flex justify-between items-center px-gutter py-base w-full fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="text-on-surface hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
-<p class="font-body-md text-body-md text-on-surface-variant text-center sm:text-right">
-                            Already a student? <a class="text-primary hover:underline" href="#">Student Login</a>
-</p>
+<h1 class="text-headline-md-mobile font-headline-md-mobile text-primary">Pro Pad Music</h1>
 </div>
-</form>
+<img alt="Student Profile Avatar" class="w-8 h-8 rounded-full object-cover" data-alt="A small circular avatar showing a young student with headphones in a dark recording studio setting, lit by warm amber and gold rim lighting, professional premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgIvce94frENBehI8Ma9HaDQdbIpMZH2UFB28ijD76f9XrTywu6IeCdXITvI1vBOwZSwENkTEMgfRx0wWKr5WPAw_6h4HZdfuWqC6z3UDrhidQFXtQh-CCnJRYK7J1BV2_MpwkmYeyFbUGhaM4KLAOeZAqW8lreiGyCILZzX88JAgShFmY5AYixl73amLA5uTNcLDF3ulFwjrQuyLwoJB-zDvnqjXU4wmpcZz8B3UlN2p_nudhga8U"/>
+</header>
+<main class="pt-24 px-gutter max-w-4xl mx-auto space-y-section-gap">
+<div class="space-y-8">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface border-b border-surface-container-highest pb-4">Settings</h2>
+<!-- ACCOUNT SECTION -->
+<section class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary tracking-widest uppercase mb-4">Account</h3>
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col gap-4">
+<a class="flex items-center justify-between w-full group py-2 hover:bg-surface-variant transition-colors rounded-lg px-2" href="{{DATA:SCREEN:SCREEN_13}}">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="person">person</span>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Edit Profile</span>
 </div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</a>
+<div class="h-px bg-surface-container-highest w-full"></div>
+<button class="flex items-center justify-between w-full group py-2 hover:bg-surface-variant transition-colors rounded-lg px-2">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="lock">lock</span>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Change Password</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- NOTIFICATIONS SECTION -->
+<section class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary tracking-widest uppercase mb-4">Notifications</h3>
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col gap-4">
+<div class="flex items-center justify-between w-full py-2 px-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">WhatsApp Updates</span>
+<span class="text-sm text-on-surface-variant">Receive alerts on WhatsApp</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out z-10 opacity-0" id="whatsapp-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer relative before:absolute before:content-[''] before:w-6 before:h-6 before:bg-white before:rounded-full before:transition-transform before:duration-200 before:ease-in-out" for="whatsapp-toggle"></label>
+</div>
+</div>
+<div class="h-px bg-surface-container-highest w-full"></div>
+<div class="flex items-center justify-between w-full py-2 px-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Class Reminders</span>
+<span class="text-sm text-on-surface-variant">1 hour before class starts</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out z-10 opacity-0" id="class-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer relative before:absolute before:content-[''] before:w-6 before:h-6 before:bg-white before:rounded-full before:transition-transform before:duration-200 before:ease-in-out" for="class-toggle"></label>
+</div>
+</div>
+<div class="h-px bg-surface-container-highest w-full"></div>
+<div class="flex items-center justify-between w-full py-2 px-2">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface">Fee Reminders</span>
+<span class="text-sm text-on-surface-variant">Alerts for upcoming dues</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out z-10 opacity-0" id="fee-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer relative before:absolute before:content-[''] before:w-6 before:h-6 before:bg-white before:rounded-full before:transition-transform before:duration-200 before:ease-in-out" for="fee-toggle"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- APPEARANCE SECTION -->
+<section class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary tracking-widest uppercase mb-4">Appearance</h3>
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col gap-4">
+<div class="flex items-center justify-between w-full py-2 px-2">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="dark_mode">dark_mode</span>
+<span class="font-body-md text-body-md text-on-surface">Dark Mode</span>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer transition-transform duration-200 ease-in-out z-10 opacity-0" disabled="" id="theme-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-variant cursor-pointer relative before:absolute before:content-[''] before:w-6 before:h-6 before:bg-white before:rounded-full before:transition-transform before:duration-200 before:ease-in-out" for="theme-toggle"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- PRIVACY SECTION -->
+<section class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary tracking-widest uppercase mb-4">Privacy</h3>
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col gap-4">
+<a class="flex items-center justify-between w-full group py-2 hover:bg-surface-variant transition-colors rounded-lg px-2" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="policy">policy</span>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="open_in_new">open_in_new</span>
+</a>
+<div class="h-px bg-surface-container-highest w-full"></div>
+<a class="flex items-center justify-between w-full group py-2 hover:bg-surface-variant transition-colors rounded-lg px-2" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="gavel">gavel</span>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Terms &amp; Conditions</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- ACTION SECTION -->
+<section class="pt-8 flex justify-center">
+<a class="px-8 py-3 rounded-full border border-error text-error font-label-md text-label-md hover:bg-error hover:text-on-error transition-colors flex items-center gap-2" href="{{DATA:SCREEN:SCREEN_7}}">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Logout
+                </a>
+</section>
 </div>
 </main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container-high text-primary font-label-md text-label-md docked full-width bottom-0 rounded-t-xl border-t border-outline-variant shadow-lg fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim transition-colors group" href="{{DATA:SCREEN:SCREEN_6}}">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="home">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim transition-colors group" href="{{DATA:SCREEN:SCREEN_18}}">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="library_music">library_music</span>
+<span class="text-xs">My Course</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim transition-colors group" href="{{DATA:SCREEN:SCREEN_19}}">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="payments">payments</span>
+<span class="text-xs">Fees</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed-dim transition-colors group" href="{{DATA:SCREEN:SCREEN_55}}">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="notifications">notifications</span>
+<span class="text-xs">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-110 transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_13}}">
+<span class="material-symbols-outlined mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-xs">Profile</span>
+</a>
+</nav>
+<script>
+        // Setup toggle switches logic for visuals
+        const toggles = document.querySelectorAll('.toggle-checkbox');
+        toggles.forEach(toggle => {
+            if(!toggle.disabled) {
+                toggle.addEventListener('change', function() {
+                    const label = this.nextElementSibling;
+                    if(this.checked) {
+                        label.style.backgroundColor = '#d4af37';
+                        label.classList.add('before:translate-x-full');
+                    } else {
+                        label.style.backgroundColor = '#353535';
+                        label.classList.remove('before:translate-x-full');
+                    }
+                });
+                
+                // Initialize state
+                const label = toggle.nextElementSibling;
+                if(toggle.checked) {
+                    label.style.backgroundColor = '#d4af37';
+                    label.classList.add('before:translate-x-full');
+                }
+            }
+        });
+    </script>
 </body></html>
