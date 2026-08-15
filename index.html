@@ -176,5 +176,96 @@ I am interested in admission at Pro Pad Music Class.`
 );
 });
 </script>
+  <!-- PAYMENT SECTION -->
+<div style="margin:30px 15px;padding:25px;border-radius:18px;background:#181818;color:white;text-align:center;">
+
+  <h2>💳 Monthly Course Payment</h2>
+
+  <p style="font-size:20px;font-weight:bold;">
+    Course Fee: ₹2,000 / Month
+  </p>
+
+  <p>UPI ID:</p>
+
+  <p style="color:#d4af37;font-weight:bold;">
+    kalpeahnilam6068@okhdfcbank
+  </p>
+
+  <!-- PAY BUTTON -->
+  <a
+    href="upi://pay?pa=kalpeahnilam6068@okhdfcbank&pn=Pro%20Pad%20Music%20Class&am=2000&cu=INR"
+    style="display:block;background:#d4af37;color:#000;padding:14px;border-radius:10px;text-decoration:none;font-weight:bold;margin:15px 0;">
+    💰 Pay ₹2,000 Now
+  </a>
+
+  <input
+    id="paymentStudentName"
+    type="text"
+    placeholder="Student Name"
+    style="width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #555;background:#222;color:white;">
+
+  <select
+    id="paymentCourse"
+    style="width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #555;background:#222;color:white;">
+
+    <option value="">Select Course</option>
+    <option>Octapad</option>
+    <option>Tabla</option>
+    <option>Keyboard</option>
+    <option>Vocal Music</option>
+    <option>Drums</option>
+    <option>Music Production</option>
+
+  </select>
+
+  <!-- CONFIRM -->
+  <button
+    onclick="sendPaymentStatus('CONFIRMED')"
+    style="width:100%;padding:14px;margin-top:10px;border:0;border-radius:10px;background:#25D366;color:white;font-weight:bold;font-size:16px;">
+    ✅ Payment Confirm
+  </button>
+
+  <!-- PENDING -->
+  <button
+    onclick="sendPaymentStatus('PENDING')"
+    style="width:100%;padding:14px;margin-top:10px;border:0;border-radius:10px;background:#555;color:white;font-weight:bold;font-size:16px;">
+    ⏳ Payment Pending
+  </button>
+
+</div>
+
+
+<script>
+
+function sendPaymentStatus(status) {
+
+  const name =
+    document.getElementById("paymentStudentName").value.trim();
+
+  const course =
+    document.getElementById("paymentCourse").value;
+
+  if (!name || !course) {
+    alert("Please enter Student Name and select Course.");
+    return;
+  }
+
+  const message =
+`PRO PAD MUSIC CLASS
+
+Payment Status: ${status}
+
+Student Name: ${name}
+Course: ${course}
+Amount: ₹2,000`;
+
+  const whatsappURL =
+    "https://wa.me/?text=" +
+    encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+}
+
+</script>
 </body>
 </html>
