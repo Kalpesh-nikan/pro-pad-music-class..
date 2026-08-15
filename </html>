@@ -1368,4 +1368,68 @@ chat
 
 Chat on WhatsApp
 
-<
+</a>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="logo">PRO <span>PAD</span></div>
+<p>© 2026 Pro Pad Music Class, Chalisgaon. All Rights Reserved.</p>
+<p>Learn Music. Create Your Sound.</p>
+</footer>
+
+<a href="https://wa.me/919588675674"
+target="_blank"
+class="floating-whatsapp"
+aria-label="WhatsApp">
+<span class="material-symbols-outlined">chat</span>
+</a>
+
+<script>
+
+function toggleMenu(){
+const nav = document.getElementById("navMenu");
+nav.classList.toggle("active");
+}
+
+function closeMenu(){
+const nav = document.getElementById("navMenu");
+nav.classList.remove("active");
+}
+
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const name = document.getElementById("studentName").value.trim();
+const mobile = document.getElementById("mobile").value.trim();
+const age = document.getElementById("age").value.trim();
+const course = document.getElementById("course").value;
+const batch = document.getElementById("batch").value || "Not selected";
+const message = document.getElementById("message").value.trim() || "No message";
+
+const whatsappMessage =
+`*Pro Pad Music Class - Admission Enquiry*
+
+Student Name: ${name}
+Mobile Number: ${mobile}
+Age: ${age}
+Course: ${course}
+Preferred Batch: ${batch}
+Address / Message: ${message}
+
+I am interested in admission at Pro Pad Music Class.`;
+
+const whatsappURL =
+"https://wa.me/919588675674?text=" + encodeURIComponent(whatsappMessage);
+
+window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
