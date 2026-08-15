@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portal | Pro Pad Music Class</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0b0b12;
+color:#fff;
+}
+header{
+padding:20px;
+background:#171722;
+border-bottom:1px solid #333;
+}
+header h2{margin:0}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.login{
+max-width:430px;
+margin:50px auto;
+background:#181823;
+padding:25px;
+border-radius:18px;
+}
+
+input,select{
+width:100%;
+padding:14px;
+margin:8px 0;
+border-radius:9px;
+border:1px solid #444;
+background:#0e0e15;
+color:white;
+}
+
+button{
+width:100%;
+padding:14px;
+border:0;
+border-radius:10px;
+margin-top:10px;
+background:#d4af37;
+font-weight:bold;
+cursor:pointer;
+}
+
+.portal{display:none}
+
+.nav{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin:20px 0;
+}
+
+.nav button{
+background:#222230;
+color:white;
+}
+
+.logout{
+background:#b33!important;
+color:white;
+}
+
+.section{display:none}
+.section.active{display:block}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.card{
+background:#181823;
+border:1px solid #30303d;
+border-radius:16px;
+padding:20px;
+}
+
+.profile{
+width:90px;
+height:90px;
+border-radius:50%;
+background:#333;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+margin-bottom:15px;
+}
+
+.status{
+display:inline-block;
+padding:7px 12px;
+border-radius:20px;
+background:#25d366;
+font-size:13px;
+}
+
+.small{
+color:#aaa;
+font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>🎵 Pro Pad Music Class</h2>
+</header>
+
+<div class="container">
+
+<!-- LOGIN -->
+
+<div class="login" id="loginBox">
+
+<h2>🔐 Student Sign In</h2>
+
+<input
+id="studentName"
+type="text"
+placeholder="Student Name">
+
+<input
+id="studentMobile"
+type="tel"
+placeholder="Mobile Number">
+
+<input
+id="studentPassword"
+type="password"
+placeholder="Password">
+
+<select id="studentCourse">
+
+<option value="">Select Course</option>
+
+<option>Octapad</option>
+<option>Tabla</option>
+<option>Keyboard</option>
+<option>Vocal Music</option>
+<option>Drums</option>
+<option>Music Production</option>
+
+</select>
+
+<button onclick="loginStudent()">
+Sign In
+</button>
+
+<p class="small">
+Student portal demo. Secure database login can be connected later.
+</p>
+
+</div>
+
+
+<!-- PORTAL -->
+
+<div class="portal" id="portal">
+
+<h2>
+Welcome, <span id="welcomeName">Student</span> 👋
+</h2>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<button onclick="showPage('dashboard')">
+🏠 Dashboard
+</button>
+
+<button onclick="showPage('profile')">
+👤 My Profile
+</button>
+
+<button onclick="showPage('course')">
+🎵 My Course
+</button>
+
+<button onclick="showPage('payment')">
+💳 Payment & History
+</button>
+
+<button onclick="showPage('settings')">
+⚙️ Settings
+</button>
+
+<button class="logout" onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div id="dashboard" class="section active">
+
+<div class="grid">
+
+<div class="card">
+<h3>🎵 My Course</h3>
+<p id="dashCourse">---</p>
+</div>
+
+<div class="card">
+<h3>💰 Monthly Fee</h3>
+<p>₹2,000 / Month</p>
+</div>
+
+<div class="card">
+<h3>💳 Payment Status</h3>
+<span class="status">CONFIRMED</span>
+</div>
+
+<div class="card">
+<h3>📅 Class</h3>
+<p>Contact academy for class schedule.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROFILE -->
+
+<div id="profile" class="section">
+
+<div class="card">
+
+<div class="profile">
+👤
+</div>
+
+<h2>My Profile</h2>
+
+<p>
+<b>Student Name:</b>
+<span id="profileName"></span>
+</p>
+
+<p>
+<b>Mobile:</b>
+<span id="profileMobile"></span>
+</p>
+
+<p>
+<b>Course:</b>
+<span id="profileCourse"></span>
+</p>
+
+<p>
+<b>Student ID:</b>
+PP-2026
+</p>
+
+<p>
+<b>Academy:</b>
+Pro Pad Music Class
+</p>
+
+</div>
+
+</div>
+
+
+<!-- COURSE -->
+
+<div id="course" class="section">
+
+<div class="card">
+
+<h2>🎵 My Course</h2>
+
+<p>
+<b>Course:</b>
+<span id="courseName"></span>
+</p>
+
+<p>
+<b>Monthly Fee:</b>
+₹2,000
+</p>
+
+<p>
+<b>Academy:</b>
+Pro Pad Music Class
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PAYMENT -->
+
+<div id="payment" class="section">
+
+<div class="card">
+
+<h2>💳 Payment & History</h2>
+
+<p>
+<b>Monthly Fee:</b>
+₹2,000
+</p>
+
+<p>
+<b>Payment Status:</b>
+<span class="status">CONFIRMED</span>
+</p>
+
+<hr>
+
+<h3>Payment History</h3>
+
+<p>
+₹2,000 — Monthly Course Fee
+</p>
+
+<a
+href="upi://pay?pa=kalpeahnilam6068@okhdfcbank&pn=Pro%20Pad%20Music%20Class&am=2000&cu=INR"
+style="
+display:block;
+text-align:center;
+background:#d4af37;
+color:#000;
+padding:14px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+">
+
+💰 Pay ₹2,000
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- SETTINGS -->
+
+<div id="settings" class="section">
+
+<div class="card">
+
+<h2>⚙️ Settings</h2>
+
+<p>🔔 Notifications</p>
+
+<p>👤 Edit Profile</p>
+
+<p>🔐 Change Password</p>
+
+<button class="logout" onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function loginStudent(){
+
+const name =
+document.getElementById("studentName").value.trim();
+
+const mobile =
+document.getElementById("studentMobile").value.trim();
+
+const password =
+document.getElementById("studentPassword").value.trim();
+
+const course =
+document.getElementById("studentCourse").value;
+
+
+if(!name || !mobile || !password || !course){
+
+alert(
+"Please enter Student Name, Mobile, Password and Course."
+);
+
+return;
+
+}
+
+
+document.getElementById("loginBox").style.display="none";
+
+document.getElementById("portal").style.display="block";
+
+
+document.getElementById("welcomeName").innerText=name;
+
+document.getElementById("profileName").innerText=name;
+
+document.getElementById("profileMobile").innerText=mobile;
+
+document.getElementById("profileCourse").innerText=course;
+
+document.getElementById("courseName").innerText=course;
+
+document.getElementById("dashCourse").innerText=course;
+
+}
+
+
+function showPage(page){
+
+document
+.querySelectorAll(".section")
+.forEach(function(section){
+
+section.classList.remove("active");
+
+});
+
+
+document
+.getElementById(page)
+.classList.add("active");
+
+}
+
+
+function logout(){
+
+document.getElementById("portal").style.display="none";
+
+document.getElementById("loginBox").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
