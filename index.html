@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Pad Music Class | Chalisgaon</title>
+<meta name="description" content="Pro Pad Music Class, Chalisgaon - Learn Octapad, Tabla, Keyboard, Vocal Music, Drums and Music Production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Hanken Grotesk",sans-serif;background:#131313;color:#e5e2e1;min-height:100vh}
+h1,h2,h3,h4{font-family:"Montserrat",sans-serif}
+a{text-decoration:none}
+header{position:sticky;top:0;z-index:1000;background:rgba(19,19,19,.96);backdrop-filter:blur(14px);border-bottom:1px solid #353535}
+.navbar{max-width:1200px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{color:#f2ca50;font-family:"Montserrat",sans-serif;font-size:22px;font-weight:800}.logo span{color:#fff}
+nav{display:flex;gap:28px}nav a{color:#e5e2e1;font-weight:600;transition:.3s}nav a:hover{color:#f2ca50}
+.menu-btn{display:none;background:none;border:0;color:#f2ca50;font-size:29px}
+.hero{min-height:570px;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 24px;background:radial-gradient(circle at top right,rgba(212,175,55,.20),transparent 35%),radial-gradient(circle at bottom left,rgba(253,139,0,.11),transparent 30%),#131313}
+.hero-content{max-width:900px}.badge{display:inline-block;padding:9px 19px;border:1px solid #d4af37;border-radius:999px;color:#f2ca50;font-size:14px;font-weight:700;margin-bottom:25px}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.08;margin-bottom:22px}
+.gold{background:linear-gradient(90deg,#f2ca50,#d4af37,#b8860b);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:720px;margin:auto;color:#d0c5af;font-size:18px;line-height:1.7}
+.hero-buttons{margin-top:34px;display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:14px 27px;border-radius:8px;font-weight:700;transition:.3s;cursor:pointer;border:none;font-size:16px}
+.btn-primary{background:#f2ca50;color:#241a00}.btn-primary:hover{background:#ffe088;transform:translateY(-2px)}
+.btn-outline{border:1px solid #f2ca50;color:#f2ca50;background:transparent}.btn-outline:hover{background:#f2ca50;color:#241a00}
+.whatsapp-btn{background:#25D366;color:#071b0d}.whatsapp-btn:hover{background:#54e787;transform:translateY(-2px)}
+.container{max-width:1200px;margin:auto;padding:0 24px}section{padding:80px 0}
+.section-heading{text-align:center;margin-bottom:50px}.section-heading h2{font-size:34px;margin-bottom:12px}.section-heading p{color:#d0c5af;font-size:17px}
+.courses,.features{background:#1b1b1b}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.course-card{background:rgba(42,42,42,.75);border:1px solid #353535;border-radius:14px;padding:30px;transition:.3s}
+.course-card:hover{transform:translateY(-6px);border-color:#d4af37;box-shadow:0 15px 35px rgba(0,0,0,.35)}
+.course-icon{width:55px;height:55px;border-radius:12px;background:#d4af37;color:#241a00;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.material-symbols-outlined{font-size:30px}.course-card h3{font-size:22px;margin-bottom:12px}.course-card p{color:#d0c5af;line-height:1.6;margin-bottom:20px}
+.course-card ul{list-style:none;margin-bottom:24px}.course-card li{margin:10px 0}.course-card li::before{content:"✓";color:#f2ca50;font-weight:bold;margin-right:10px}
+.price{font-size:24px;color:#f2ca50;font-weight:700;margin-bottom:20px}
+.about-grid,.admission-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.about-content h2,.admission-info h2{font-size:34px;margin-bottom:18px}.about-content p,.admission-info>p{color:#d0c5af;line-height:1.7;margin-bottom:20px}
+.teacher-card,.form-card,.contact-box,.feature{background:#20201f;border:1px solid #353535;border-radius:14px}
+.teacher-card{text-align:center;padding:35px}.teacher-icon{width:90px;height:90px;margin:0 auto 20px;border-radius:50%;background:#d4af37;color:#241a00;display:flex;align-items:center;justify-content:center}.teacher-icon span{font-size:50px}
+.teacher-card h3{font-size:24px;margin-bottom:8px}.role{color:#f2ca50;font-weight:700;margin-bottom:18px}.qualifications{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.qualification{border:1px solid #4d4635;padding:8px 12px;border-radius:7px;color:#d0c5af;font-size:13px}
+.steps{display:flex;flex-direction:column;gap:20px}.step{display:flex;gap:16px}.step-number{min-width:42px;height:42px;border-radius:50%;background:#f2ca50;color:#241a00;display:flex;align-items:center;justify-content:center;font-weight:700}.step h3{margin-bottom:5px;font-size:18px}.step p{color:#d0c5af;line-height:1.5}
+.form-card{padding:32px;box-shadow:0 15px 35px rgba(0,0,0,.35)}.form-card h3{font-size:26px;margin-bottom:8px}.form-subtitle{color:#99907c;margin-bottom:24px}
+.form-group{margin-bottom:18px}.form-group label{display:block;margin-bottom:7px;font-weight:600}.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px 14px;border:1px solid #4d4635;border-radius:7px;background:#131313;color:#e5e2e1;font-family:inherit;font-size:15px}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:#f2ca50}.form-group textarea{min-height:95px;resize:vertical}.form-card .btn{width:100%}.required{color:#f2ca50}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.feature{text-align:center;padding:28px 18px;transition:.3s}.feature:hover{border-color:#d4af37;transform:translateY(-4px)}.feature .material-symbols-outlined{color:#f2ca50;font-size:40px;margin-bottom:14px}.feature h3{font-size:18px;margin-bottom:8px}.feature p{color:#d0c5af;font-size:14px;line-height:1.5}
+.contact{text-align:center}.contact-box{max-width:850px;margin:auto;padding:45px 25px}.contact-box h2{margin-bottom:14px}.contact-box p{color:#d0c5af;margin-bottom:25px}.contact-details{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-bottom:28px}.contact-item{color:#e5e2e1}.contact-item span{color:#f2ca50;vertical-align:middle;margin-right:5px}
+footer{background:#0e0e0e;border-top:1px solid #353535;padding:30px 20px;text-align:center}footer .logo{margin-bottom:8px}footer p{color:#99907c;font-size:14px;margin:5px}
+.floating-whatsapp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(0,0,0,.4);z-index:999}.floating-whatsapp span{font-size:31px}
+@media(max-width:900px){.course-grid{grid-template-columns:1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}.admission-grid,.about-grid{grid-template-columns:1fr}}
+@media(max-width:650px){nav{display:none;position:absolute;top:69px;left:0;right:0;background:#131313;flex-direction:column;gap:0;padding:10px 24px 20px;border-bottom:1px solid #353535}nav.active{display:flex}nav a{width:100%;padding:13px 0;border-bottom:1px solid #292929}.menu-btn{display:block}.hero{min-height:500px;padding:65px 20px}.hero h1{font-size:39px}.hero p{font-size:16px}section{padding:60px 0}.course-grid,.feature-grid{grid-template-columns:1fr}.section-heading h2,.admission-info h2,.about-content h2{font-size:28px}.form-card{padding:24px}.contact-details{flex-direction:column;gap:15px}.floating-whatsapp{width:54px;height:54px;right:16px;bottom:16px}}
+</style>
+</head>
+<body>
+
+<header><div class="navbar">
+<a href="#home" class="logo">PRO <span>PAD</span></a>
+<nav id="navMenu">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#courses" onclick="closeMenu()">Courses</a>
+<a href="#about" onclick="closeMenu()">About</a>
+<a href="#admission" onclick="closeMenu()">Admission</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
+</nav>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+</div></header>
+
+<section class="hero" id="home"><div class="hero-content">
+<div class="badge">🎵 Professional Music Training</div>
+<h1>Learn Music. <span class="gold">Create Your Sound.</span></h1>
+<p>Welcome to Pro Pad Music Class, Chalisgaon. Learn practical music skills with professional guidance, structured training and real performance experience.</p>
+<div class="hero-buttons">
+<a href="#admission" class="btn btn-primary">Apply for Admission</a>
+<a href="#courses" class="btn btn-outline">View Courses</a>
+</div>
+</div></section>
+
+<section class="courses" id="courses"><div class="container">
+<div class="section-heading"><h2>Our <span class="gold">Courses</span></h2><p>Choose the course that matches your musical interest.</p></div>
+<div class="course-grid">
+
+<div class="course-card"><div class="course-icon"><span class="material-symbols-outlined">graphic_eq</span></div><h3>Octapad</h3><p>Learn professional Octapad playing from basic rhythm patterns to live performance.</p><ul><li>Basic Rhythm Training</li><li>Sambal & Folk Rhythms</li><li>Bollywood Rhythms</li><li>Live Performance</li></ul><div class="price">₹1,500 / Month</div><a href="#admission" class="btn btn-primary">Join Course</a></div>
+
+<div class="course-card"><div class="course-icon"><span class="material-symbols-outlined">music_note</span></div><h3>Tabla</h3><p>Build strong foundations in Tabla, taal, bols and practical rhythm performance.</p><ul><li>Basic Bols</li><li>Taal & Laya</li><li>Classical Training</li><li>Performance Practice</li></ul><div class="price">₹1,500 / Month</div><a href="#admission" class="btn btn-primary">Join Course</a></div>
+
+<div class="course-card"><div class="course-icon"><span class="material-symbols-outlined">piano</span></div><h3>Keyboard</h3><p>Learn keyboard from beginner level to practical performance techniques.</p><ul><li>Basic Music Theory</li><li>Chords & Scales</li><li>Song Playing</li><li>Performance Practice</li></ul><div class="price">₹1,500 / Month</div><a href="#admission" class="btn btn-primary">Join Course</a></div>
+
+<div class="course-card"><div class="course-icon"><span class="material-symbols-outlined">mic</span></div><h3>Vocal Music</h3><p>Improve your voice, pitch, rhythm and singing performance with structured training.</p><ul><li>Voice Training</li><li>Sur & Taal</li><li>Breathing Techniques</li><li>Stage Performance</li></ul><div class="price">₹1,500 / Month</div><a href="#admission" class="btn btn-primary">Join Course</a></div>
+
+<div class="course-card"><div class="course-icon"><span class="material-symbols-outlined">graphic_eq</span></div><h3>Music Production</h3><p>Learn recording, editing, arranging and digital music production.</p><ul><li>DAW Basics</li><li>Recording</li><li>Audio Editing</li><li>Music Arrangement</li></ul><div class="price">₹2,500 / Month</div><a href="#admission" class="btn btn-primary">Join Course</a></div>
+
+<div class="course-card"><div class="course-icon"><span class="material-symbols-outlined">album</span></div><h3>Drums</h3><p>Develop timing, groove, coordination and stage performance skills.</p><ul><li>Basic Drum Techniques</li><li>Grooves & Fills</li><li>Rhythm Training</li><li>Live Performance</li></ul><div class="price">₹1,500 / Month</div><a href="#admission" class="btn btn-primary">Join Course</a></div>
+
+</div></div></section>
+
+<section id="about"><div class="container"><div class="about-grid">
+<div class="about-content"><h2>Learn From <span class="gold">Experience</span></h2><p>Pro Pad Music Class is focused on practical, professional and performance-oriented music education.</p><p>Students can develop their musical skills through regular practice, music theory, rhythm training, stage performance and modern music technology.</p><p>Our goal is to help students build confidence and develop the skills required for music performance and future opportunities.</p></div>
+<div class="teacher-card"><div class="teacher-icon"><span class="material-symbols-outlined">person</span></div><h3>Kalpesh Nikam</h3><div class="role">Founder & Music Instructor</div><div class="qualifications"><div class="qualification">MA Music</div><div class="qualification">BA Music</div><div class="qualification">Trinity College of London</div><div class="qualification">Professional Musician</div></div></div>
+</div></div></section>
+
+<section id="admission"><div class="container"><div class="admission-grid">
+<div class="admission-info"><h2>Start Your <span class="gold">Music Journey</span></h2><p>Admission is simple. Fill in the form and submit your details. Your admission information can be sent directly to Pro Pad Music Class on WhatsApp.</p>
+<div class="steps">
+<div class="step"><div class="step-number">1</div><div><h3>Choose Your Course</h3><p>Select the music course you want to learn.</p></div></div>
+<div class="step"><div class="step-number">2</div><div><h3>Fill Admission Form</h3><p>Enter your basic information and preferred course.</p></div></div>
+<div class="step"><div class="step-number">3</div><div><h3>Contact Us</h3><p>Send your admission details on WhatsApp.</p></div></div>
+<div class="step"><div class="step-number">4</div><div><h3>Start Learning</h3><p>Join your selected batch and begin your music journey.</p></div></div>
+</div></div>
+
+<div class="form-card"><h3>Admission Form</h3><p class="form-subtitle">Fill your details below.</p>
+<form id="admissionForm">
+<div class="form-group"><label>Student Name <span class="required">*</span></label><input type="text" id="studentName" placeholder="Enter your full name" required></div>
+<div class="form-group"><label>Mobile Number <span class="required">*</span></label><input type="tel" id="mobile" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required></div>
+<div class="form-group"><label>Age <span class="required">*</span></label><input type="number" id="age" placeholder="Enter age" min="3" max="100" required></div>
+<div class="form-group"><label>Select Course <span class="required">*</span></label><select id="course" required><option value="">Select Course</option><option>Octapad</option><option>Tabla</option><option>Keyboard</option><option>Vocal Music</option><option>Music Production</option><option>Drums</option></select></div>
+<div class="form-group"><label>Preferred Batch</label><select id="batch"><option value="">Select Batch</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select></div>
+<div class="form-group"><label>Address / Message</label><textarea id="message" placeholder="Enter your address or any message"></textarea></div>
+<button type="submit" class="btn whatsapp-btn"><span class="material-symbols-outlined">chat</span>Send Admission on WhatsApp</button>
+</form></div>
+</div></div></section>
+
+<section class="features"><div class="container">
+<div class="section-heading"><h2>Why Choose <span class="gold">Pro Pad?</span></h2><p>Learn, practice and perform with confidence.</p></div>
+<div class="feature-grid">
+<div class="feature"><span class="material-symbols-outlined">school</span><h3>Professional Training</h3><p>Structured learning with practical music education.</p></div>
+<div class="feature"><span class="material-symbols-outlined">music_note</span><h3>Practical Learning</h3><p>Learn through regular practice and real musical applications.</p></div>
+<div class="feature"><span class="material-symbols-outlined">mic</span><h3>Stage Performance</h3><p>Build confidence through performance and live music experience.</p></div>
+<div class="feature"><span class="material-symbols-outlined">groups</span><h3>Personal Guidance</h3><p>Individual attention and guidance according to student level.</p></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="container"><div class="contact-box">
+<h2>Contact <span class="gold">Pro Pad</span></h2><p>For admission, course information and batch timings, contact us directly.</p>
+<div class="contact-details">
+<div class="contact-item"><span class="material-symbols-outlined">person</span>Kalpesh Nikam</div>
+<div class="contact-item"><span class="material-symbols-outlined">phone</span>9588675674</div>
+<div class="contact-item"><span class="material-symbols-outlined">location_on</span>Chalisgaon, Maharashtra</div>
+</div>
+<a href="https://wa.me/919588675674" target="_blank" class="btn whatsapp-btn"><span class="material-symbols-outlined">chat</span>Chat on WhatsApp</a>
+</div></div></section>
+
+<footer><div class="logo">PRO <span>PAD</span></div><p>© 2026 Pro Pad Music Class, Chalisgaon. All Rights Reserved.</p><p>Learn Music. Create Your Sound.</p></footer>
+
+<a href="https://wa.me/919588675674" target="_blank" class="floating-whatsapp" aria-label="WhatsApp"><span class="material-symbols-outlined">chat</span></a>
+
+<script>
+function toggleMenu(){document.getElementById("navMenu").classList.toggle("active")}
+function closeMenu(){document.getElementById("navMenu").classList.remove("active")}
+
+document.getElementById("admissionForm").addEventListener("submit",function(e){
+e.preventDefault();
+const name=document.getElementById("studentName").value.trim();
+const mobile=document.getElementById("mobile").value.trim();
+const age=document.getElementById("age").value.trim();
+const course=document.getElementById("course").value;
+const batch=document.getElementById("batch").value||"Not selected";
+const message=document.getElementById("message").value.trim()||"No message";
+
+const text=`*PRO PAD MUSIC CLASS - NEW ADMISSION*%0A%0AStudent Name: ${name}%0AStudent Mobile: ${mobile}%0AAge: ${age}%0ACourse: ${course}%0APreferred Batch: ${batch}%0AAddress / Message: ${message}%0A%0AI am interested in admission at Pro Pad Music Class.`;
+
+window.location.href="https://wa.me/919588675674?text="+encodeURIComponent(
+`*PRO PAD MUSIC CLASS - NEW ADMISSION*
+
+Student Name: ${name}
+Student Mobile: ${mobile}
+Age: ${age}
+Course: ${course}
+Preferred Batch: ${batch}
+Address / Message: ${message}
+
+I am interested in admission at Pro Pad Music Class.`
+);
+});
+</script>
+</body>
+</html>
