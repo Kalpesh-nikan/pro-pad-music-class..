@@ -247,8 +247,31 @@ Welcome, <span id="welcomeName">Student</span> 👋
 
 <div class="card">
 
-<div class="profile">
-👤
+<div style="text-align:center;margin-bottom:20px;">
+
+  <div id="profilePhotoPreview"
+       style="width:110px;height:110px;border-radius:50%;
+       background:#333;margin:0 auto 12px;
+       display:flex;align-items:center;
+       justify-content:center;overflow:hidden;
+       font-size:45px;">
+    👤
+  </div>
+
+  <label for="profilePhotoInput"
+       style="display:inline-block;
+       background:#d4af37;color:#241a00;
+       padding:10px 16px;border-radius:8px;
+       font-weight:bold;cursor:pointer;">
+    📸 Add Profile Photo
+  </label>
+
+  <input id="profilePhotoInput"
+       type="file"
+       accept="image/*"
+       style="display:none;"
+       onchange="changeProfilePhoto(event)">
+
 </div>
 
 <h2>My Profile</h2>
@@ -459,7 +482,23 @@ document.getElementById("portal").style.display="none";
 document.getElementById("loginBox").style.display="block";
 
 }
+function changeProfilePhoto(event){
 
+  const file = event.target.files[0];
+
+  if(!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = function(e){
+
+    document.getElementById("profilePhotoPreview").innerHTML =
+      '<img src="' + e.target.result + '" style="width:100%;height:100%;object-fit:cover;">';
+
+  };
+
+  reader.readAsDataURL(file);
+}
 </script>
 
 </body>
