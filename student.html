@@ -499,7 +499,14 @@ function changeProfilePhoto(event){
 
   reader.readAsDataURL(file);
 }
-</script>
+const SUPABASE_URL = "https://nonvirovdzqdcufudlil.supabase.co";
+const SUPABASE_KEY = "sb_publishable_M6p8RR9xBRdAKQBxlO2qUw_AsXuIcR2";
+
+const supabaseHeaders = {
+  "apikey": SUPABASE_KEY,
+  "Authorization": "Bearer " + SUPABASE_KEY,
+  "Content-Type": "application/json"
+};</script>
 
 </body>
 </html>
