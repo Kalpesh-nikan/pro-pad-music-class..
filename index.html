@@ -286,6 +286,36 @@ const supabaseClient = window.supabase.createClient(
 );
 
 console.log("Supabase connected:", supabaseClient);
+async function uploadCloudFile() {
+
+  const fileInput = document.getElementById("cloudFile");
+  const status = document.getElementById("cloudStatus");
+
+  const file = fileInput.files[0];
+
+  if (!file) {
+    status.innerText = "Please select a file.";
+    return;
+  }
+
+  status.innerText = "Uploading...";
+
+  const filePath = "student/" + Date.now() + "_" + file.name;
+
+  const { data, error } = await supabaseClient
+    .storage
+    .from("documents")
+    .upload(filePath, file);
+
+  if (error) {
+    console.error(error);
+    status.innerText = "Upload failed: " + error.message;
+    return;
+  }
+
+  status.innerText = "✅ File uploaded successfully!";
+  fileInput.value = "";
+}
 </script>
 </body>
 </html>
