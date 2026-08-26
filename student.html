@@ -194,7 +194,9 @@ Welcome, <span id="welcomeName">Student</span> 👋
 <button onclick="showPage('course')">
 🎵 My Course
 </button>
-
+<button onclick="showPage('cloud')">
+☁️ Cloud Drive
+</button>
 <button onclick="showPage('payment')">
 💳 Payment & History
 </button>
@@ -209,7 +211,37 @@ Welcome, <span id="welcomeName">Student</span> 👋
 
 </div>
 
+<!-- CLOUD DRIVE -->
 
+<div id="cloud" class="section">
+
+<div class="card">
+
+<h2>☁️ My Cloud Drive</h2>
+
+<p class="small">
+Upload your documents, payment receipts and other files.
+</p>
+
+<input type="file" id="cloudFile">
+
+<button onclick="uploadCloudFile()">
+📤 Upload File
+</button>
+
+<p id="cloudStatus" class="small"></p>
+
+<hr>
+
+<h3>📁 My Files</h3>
+
+<div id="cloudFiles">
+<p class="small">No files uploaded yet.</p>
+</div>
+
+</div>
+
+</div>
 <!-- DASHBOARD -->
 
 <div id="dashboard" class="section active">
