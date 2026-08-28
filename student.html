@@ -554,8 +554,7 @@ async function uploadCloudFile() {
 
   const filePath = "student/" + Date.now() + "_" + file.name;
 
-  const { error } = await supabaseClient
-    .storage
+  const { error } = await supabaseClient.storage
     .from("documents")
     .upload(filePath, file);
 
@@ -567,8 +566,12 @@ async function uploadCloudFile() {
 
   status.innerText = "✅ File uploaded successfully!";
   fileInput.value = "";
+
+  loadCloudFiles();
 }
-  async function loadCloudFiles() {
+
+
+async function loadCloudFiles() {
 
   const box = document.getElementById("cloudFiles");
 
@@ -586,27 +589,30 @@ async function uploadCloudFile() {
 
   if (error) {
     console.error(error);
-    box.innerHTML =
-      "<p class='small'>❌ Unable to load files.</p>";
+    box.innerHTML = "<p class='small'>❌ Unable to load files.</p>";
     return;
   }
 
   if (!data || data.length === 0) {
-    box.innerHTML =
-      "<p class='small'>No files uploaded yet.</p>";
+    box.innerHTML = "<p class='small'>No files uploaded yet.</p>";
     return;
   }
 
   box.innerHTML = "";
 
-  data.forEach(function(file) {
+  for (const file of data) {
 
     const filePath = "student/" + file.name;
 
-    const { data: urlData } =
-      supabaseClient.storage
+    const { data: signedData, error: signedError } =
+      await supabaseClient.storage
         .from("documents")
-        .getPublicUrl(filePath);
+        .createSignedUrl(filePath, 60 * 60);
+
+    if (signedError) {
+      console.error(signedError);
+      continue;
+    }
 
     const item = document.createElement("div");
 
@@ -618,7 +624,7 @@ async function uploadCloudFile() {
         📄 ${file.name}
       </div>
 
-      <a href="${urlData.publicUrl}"
+      <a href="${signedData.signedUrl}"
          target="_blank"
          style="
          display:inline-block;
@@ -633,12 +639,14 @@ async function uploadCloudFile() {
     `;
 
     box.appendChild(item);
-  });
+  }
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   loadCloudFiles();
 });
+
 </script>
 
 </body>
