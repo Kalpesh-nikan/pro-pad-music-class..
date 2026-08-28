@@ -568,11 +568,78 @@ async function uploadCloudFile() {
   status.innerText = "✅ File uploaded successfully!";
   fileInput.value = "";
 }
-const supabaseHeaders = {
-  "apikey": SUPABASE_KEY,
-  "Authorization": "Bearer " + SUPABASE_KEY,
-  "Content-Type": "application/json"
-};</script>
+  async function loadCloudFiles() {
+
+  const box = document.getElementById("cloudFiles");
+
+  box.innerHTML = "<p class='small'>Loading files...</p>";
+
+  const { data, error } = await supabaseClient.storage
+    .from("documents")
+    .list("student", {
+      limit: 100,
+      sortBy: {
+        column: "created_at",
+        order: "desc"
+      }
+    });
+
+  if (error) {
+    console.error(error);
+    box.innerHTML =
+      "<p class='small'>❌ Unable to load files.</p>";
+    return;
+  }
+
+  if (!data || data.length === 0) {
+    box.innerHTML =
+      "<p class='small'>No files uploaded yet.</p>";
+    return;
+  }
+
+  box.innerHTML = "";
+
+  data.forEach(function(file) {
+
+    const filePath = "student/" + file.name;
+
+    const { data: urlData } =
+      supabaseClient.storage
+        .from("documents")
+        .getPublicUrl(filePath);
+
+    const item = document.createElement("div");
+
+    item.style.cssText =
+      "background:#222230;padding:15px;margin:10px 0;border-radius:12px;";
+
+    item.innerHTML = `
+      <div style="margin-bottom:10px;">
+        📄 ${file.name}
+      </div>
+
+      <a href="${urlData.publicUrl}"
+         target="_blank"
+         style="
+         display:inline-block;
+         background:#d4af37;
+         color:#000;
+         padding:9px 14px;
+         border-radius:8px;
+         text-decoration:none;
+         font-weight:bold;">
+         ⬇️ Download
+      </a>
+    `;
+
+    box.appendChild(item);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  loadCloudFiles();
+});
+</script>
 
 </body>
 </html>
